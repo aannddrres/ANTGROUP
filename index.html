@@ -32,19 +32,20 @@
     <h1 id="hero-text">უსაფრთხოება, ენერგია და ტექნოლოგიები ერთ სივრცეში</h1>
   </section>
 
-  <section id="services" class="reveal">
-    <div class="service-grid">
-      <div class="service-box">
+  <section id="services" class="section">
+    <h2>ჩვენი სერვისები</h2>
+    <div class="card-grid">
+      <div class="card">
         <i class="fas fa-video fa-2x"></i>
         <h3 id="s1">ვიდეო მეთვალყურეობა</h3>
         <p id="s1desc">უსაფრთხოების კამერების მონტაჟი და ინტეგრაცია</p>
       </div>
-      <div class="service-box">
+      <div class="card">
         <i class="fas fa-solar-panel fa-2x"></i>
         <h3 id="s2">მზის პანელები</h3>
         <p id="s2desc">ენერგოდამოკიდებული, ეკოლოგიური სისტემა</p>
       </div>
-      <div class="service-box">
+      <div class="card">
         <i class="fas fa-network-wired fa-2x"></i>
         <h3 id="s3">IT ინფრასტრუქტურა</h3>
         <p id="s3desc">ქსელები, Wi-Fi, სერვერები, დომოფონები</p>
@@ -52,7 +53,7 @@
     </div>
   </section>
 
-  <section id="calculator" class="reveal">
+  <section id="calculator" class="section">
     <div class="form-section">
       <h3 id="calc-title">მზის ენერგიის კალკულატორი</h3>
       <form onsubmit="return calcSolar(event)">
@@ -63,7 +64,7 @@
     </div>
   </section>
 
-  <section id="contact" class="reveal">
+  <section id="contact" class="section">
     <div class="form-section">
       <h3 id="contact-title">დაგვიკავშირდით</h3>
       <form onsubmit="return contactForm(event)">
@@ -164,17 +165,6 @@
       e.target.reset();
       return false;
     }
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal");
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll("section").forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
-
