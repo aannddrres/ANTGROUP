@@ -6,159 +6,9 @@
   <meta name="description" content="ANT GROUP გთავაზობთ ვიდეო მეთვალყურეობას, მზის პანელებს და IT ინფრასტრუქტურას.">
   <meta name="keywords" content="ვიდეო კამერები, მზის პანელები, დომოფონი, IT მომსახურება, ქსელები">
   <title>ANT GROUP – უსაფრთხოება და ენერგია</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --main-color: #0070f3;
-      --dark-bg: #0f0f0f;
-      --light-bg: #f9f9fb;
-      --transition: 0.4s ease;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: var(--light-bg);
-      color: #222;
-      transition: background var(--transition), color var(--transition);
-    }
-    body.dark-mode {
-      background: var(--dark-bg);
-      color: #eee;
-    }
-    header {
-      position: fixed;
-      top: 0; left: 0; width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    body.dark-mode header {
-      background: rgba(20,20,20,0.9);
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: var(--main-color);
-      font-weight: 600;
-    }
-    <!-- ვამოწმებ საიტის გამოჩენას GitHub Pages-ზე -->
-    nav a.active {
-      text-decoration: underline;
-    }
-    .lang-switcher img {
-      width: 24px;
-      height: 16px;
-      margin-left: 0.5rem;
-      cursor: pointer;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    .theme-toggle {
-      background: transparent;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 6rem 2rem 3rem;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    section.reveal {
-      opacity: 1;
-      transform: none;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1581093458791-73e7ddf5f5c1') center/cover no-repeat;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 0;
-      pointer-events: none;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      z-index: 1;
-    }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .service-box {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-      text-align: center;
-    }
-    .service-box i {
-      margin-bottom: 0.5rem;
-      color: var(--main-color);
-    }
-    .service-box:hover {
-      transform: translateY(-8px);
-    }
-    body.dark-mode .service-box {
-      background: #1a1a1a;
-      color: #ddd;
-    }
-    .form-section {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
-      max-width: 700px;
-      margin: 2rem auto;
-    }
-    .form-section h3 {
-      margin-bottom: 1rem;
-    }
-    .form-section form {
-      display: grid;
-      gap: 1rem;
-    }
-    .form-section input, .form-section textarea {
-      padding: 0.8rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    .form-section button {
-      background: var(--main-color);
-      color: #fff;
-      padding: 0.8rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    footer {
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -177,9 +27,11 @@
       </span>
     </div>
   </header>
+
   <section class="hero">
     <h1 id="hero-text">უსაფრთხოება, ენერგია და ტექნოლოგიები ერთ სივრცეში</h1>
   </section>
+
   <section id="services" class="reveal">
     <div class="service-grid">
       <div class="service-box">
@@ -190,7 +42,7 @@
       <div class="service-box">
         <i class="fas fa-solar-panel fa-2x"></i>
         <h3 id="s2">მზის პანელები</h3>
-        <p id="s2desc">ენერგოდამოუკიდებელი, ეკოლოგიური სისტემა</p>
+        <p id="s2desc">ენერგოდამოკიდებული, ეკოლოგიური სისტემა</p>
       </div>
       <div class="service-box">
         <i class="fas fa-network-wired fa-2x"></i>
@@ -199,6 +51,7 @@
       </div>
     </div>
   </section>
+
   <section id="calculator" class="reveal">
     <div class="form-section">
       <h3 id="calc-title">მზის ენერგიის კალკულატორი</h3>
@@ -209,6 +62,7 @@
       </form>
     </div>
   </section>
+
   <section id="contact" class="reveal">
     <div class="form-section">
       <h3 id="contact-title">დაგვიკავშირდით</h3>
@@ -220,9 +74,11 @@
       </form>
     </div>
   </section>
+
   <footer>
     <p>© 2025 ANT GROUP — ყველა უფლება დაცულია.</p>
   </footer>
+
   <script>
     const translations = {
       ka: {
@@ -230,7 +86,7 @@
         s1: "ვიდეო მეთვალყურეობა",
         s1desc: "უსაფრთხოების კამერების მონტაჟი და ინტეგრაცია",
         s2: "მზის პანელები",
-        s2desc: "ენერგოდამოუკიდებელი, ეკოლოგიური სისტემა",
+        s2desc: "ენერგოდამოკიდებული, ეკოლოგიური სისტემა",
         s3: "IT ინფრასტრუქტურა",
         s3desc: "ქსელები, Wi-Fi, სერვერები, დომოფონები",
         calc: "მზის ენერგიის კალკულატორი",
@@ -321,3 +177,4 @@
   </script>
 </body>
 </html>
+
